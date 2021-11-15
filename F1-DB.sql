@@ -17,7 +17,7 @@ second_driver varchar (45)
 CREATE TABLE employee (
 emp_id int (20) UNSIGNED UNIQUE AUTO_INCREMENT PRIMARY KEY,
 full_name varchar(45) NOT NULL,
-team_id int (20) UNSIGNED NOT NULL UNIQUE 
+team_id int (20) UNSIGNED NOT NULL
 );
 
 CREATE TABLE engine (
@@ -153,3 +153,14 @@ UPDATE team SET
  first_driver = 14,
  second_driver = 15
 WHERE team_id = 5;
+
+# Readable view of team
+CREATE VIEW team_info AS SELECT 
+	team_name,
+    (SELECT full_name FROM employee WHERE emp_id = principal) as principal,
+    (SELECT full_name FROM employee WHERE emp_id = first_driver) as first_driver,
+    (SELECT full_name FROM employee WHERE emp_id = second_driver) as second_driver,
+    (SELECT COUNT(employee.emp_id) FROM employee WHERE employee.team_id = team.team_id) AS employees
+FROM team;
+
+SELECT * FROM team_info;
