@@ -104,9 +104,9 @@ INSERT INTO employee (full_name, team_id) VALUES ("Lando Norris", 2);
 INSERT INTO employee (full_name, team_id) VALUES ("Daniel Ricciardo", 2);
 
 UPDATE team 
-	SET principal = 4,
-		first_driver = 5,
-		second_driver = 6
+	SET principal = 5,
+		first_driver = 6,
+		second_driver = 7
 	WHERE team_id = 2;
 
 # Red Bull
@@ -115,9 +115,9 @@ INSERT INTO employee (full_name, team_id) VALUES ("Christian Horner", 3);
 INSERT INTO employee (full_name, team_id) VALUES ("Max Verstappen", 3);
 INSERT INTO employee (full_name, team_id) VALUES ("Sergio Perez", 3);
 UPDATE team 
-	SET principal = 7,
-		first_driver = 8,
-		second_driver = 9
+	SET principal = 8,
+		first_driver = 9,
+		second_driver = 10
 	WHERE team_id = 3;
 
 # Ferrari
@@ -127,9 +127,9 @@ INSERT INTO employee (full_name, team_id) VALUES ("Charles Leclerc", 4);
 INSERT INTO employee (full_name, team_id) VALUES ("Carlos Sainz", 4);
 
 UPDATE team 
-	SET principal = 10,
-		first_driver = 11,
-		second_driver = 12
+	SET principal = 11,
+		first_driver = 12,
+		second_driver = 13
 	WHERE team_id = 4;
 
 # Haas
@@ -139,9 +139,9 @@ INSERT INTO employee (full_name, team_id) VALUES ("Mick Schumacher", 5);
 INSERT INTO employee (full_name, team_id) VALUES ("Nikita Mazepin", 5);
 
 UPDATE team 
-	SET principal = 13,
-		first_driver = 14,
-		second_driver = 15
+	SET principal = 14,
+		first_driver = 15,
+		second_driver = 16
 	WHERE team_id = 5;
 
 # Adding Wings types
