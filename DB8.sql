@@ -94,3 +94,44 @@ FOREIGN KEY (skirt_wings) REFERENCES wing(wing_id);
 ALTER TABLE car
 ADD CONSTRAINT car_fk6
 FOREIGN KEY (owner) REFERENCES team(team_id);
+
+
+
+
+
+
+
+# Red Bull
+INSERT INTO team (team_name) VALUES ("Red Bull Racing Honda");
+INSERT INTO employee (full_name, team_id) VALUES ("Christian Horner", 3);
+INSERT INTO employee (full_name, team_id) VALUES ("Max Verstappen", 3);
+INSERT INTO employee (full_name, team_id) VALUES ("Sergio Perez", 3);
+UPDATE team SET
+ principal = 7,
+ first_driver = 8,
+ second_driver = 9
+WHERE team_id = 3;
+
+# Ferrari
+INSERT INTO team (team_name) VALUES ("Scuderia Ferrari");
+INSERT INTO employee (full_name, team_id) VALUES ("Mattia Binotto", 4);
+INSERT INTO employee (full_name, team_id) VALUES ("Charles Leclerc", 4);
+INSERT INTO employee (full_name, team_id) VALUES ("Carlos Sainz", 4);
+
+UPDATE team SET
+ principal = 10,
+ first_driver = 11,
+ second_driver = 12
+WHERE team_id = 4;
+
+# Haas
+INSERT INTO team (team_name) VALUES ("Haas F1 team");
+INSERT INTO employee (full_name, team_id) VALUES ("Günter Steiner", 5);
+INSERT INTO employee (full_name, team_id) VALUES ("Mick Schumacher", 5);
+INSERT INTO employee (full_name, team_id) VALUES ("Nikita Mazepin", 5);
+
+UPDATE team SET
+ principal = 13,
+ first_driver = 14,
+ second_driver = 15
+WHERE team_id = 5;
