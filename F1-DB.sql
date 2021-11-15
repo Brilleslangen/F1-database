@@ -1,4 +1,5 @@
 DROP VIEW IF EXISTS team_info;
+DROP VIEW IF EXISTS car_info;
 DROP VIEW IF EXISTS car_part_weights;
 DROP TABLE IF EXISTS employee;
 DROP TABLE IF EXISTS car;
@@ -88,6 +89,7 @@ INSERT INTO team (team_name) VALUES ("Mercedes AMG");
 INSERT INTO employee (full_name, team_id) VALUES ("Toto Wolff", 1);
 INSERT INTO employee (full_name, team_id) VALUES ("Lewis Hamilton", 1);
 INSERT INTO employee (full_name, team_id) VALUES ("Valtteri Bottas", 1);
+INSERT INTO employee (full_name, team_id) VALUES ("Bono", 1);
 
 UPDATE team 
 	SET principal = 1,
@@ -233,3 +235,5 @@ SELECT * FROM car_info;
 # Teams and their cars missing parts
 SELECT team_name, model_name FROM car, team
 	WHERE (chassis IS NULL OR engine IS NULL OR front_wing IS NULL OR rear_wing IS NULL OR skirt_wings IS NULL) AND team_id = owner;
+    
+    
